@@ -55,6 +55,14 @@ h1 { margin: 0 0 8px; font-size: clamp(22px, 3.5vw, 36px); letter-spacing: .02em
   margin: 4px 0 12px 0;
   text-align: left;
 }
+h2, .links, .mini-tech {
+    text-align: left;
+}
+.app-block{
+    margin-bottom: 40px;
+}
+
+
 .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.06); border-color: #d1d5db; }
 .btn.primary { background: var(--accent); color: #fff; border-color: transparent; }
 
