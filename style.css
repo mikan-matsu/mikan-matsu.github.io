@@ -35,13 +35,29 @@ h1 { margin: 0 0 8px; font-size: clamp(22px, 3.5vw, 36px); letter-spacing: .02em
 .hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ボタンは左寄せ（コンテナ内） */
+/* 箇条書きリスト用に修正 */
 .links {
-  display: flex; flex-direction: column; gap: 12px; margin-top: 12px;
-  width: 100%; max-width: 360px;
-  margin-left: 0;               /* 左に寄せる */
-  margin-right: auto;           /* 左寄せ維持 */
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 0 0;
+  width: 100%;            /* ← 360pxの制限をやめる */
   text-align: left;
 }
+
+.links li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 18px;
+  max-width: 720px;       /* ← 1項目あたりの最大幅を指定 */
+}
+
+.links li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .btn {
   display: inline-block; text-decoration: none;
   padding: 14px 16px; border-radius: 10px;
@@ -54,20 +70,65 @@ h1 { margin: 0 0 8px; font-size: clamp(22px, 3.5vw, 36px); letter-spacing: .02em
   color: var(--muted);
   margin: 4px 0 12px 0;
   text-align: left;
+  line-height: 1.6;
 }
 h2, .links, .mini-tech {
     text-align: left;
 }
-.app-block{
-    margin-bottom: 40px;
+.app-block {
+  margin-top: 0;       /* ←必要なら追加 */
+  margin-bottom: 40px; /* ブロック間の余白はそのまま */
+}
+.app-list {
+  font-size: 30px;
+  margin-bottom: 4px; /* ←デフォルトの余白を小さくする */
+}
+.btn-primary {
+  font-size: 20px;
+  margin-bottom: 4px; /* ←デフォルトの余白を小さくする */
+}
+.link-item {
+  display: inline-flex;      /* インラインで横並び */
+  align-items: center;       /* 縦位置を揃える */
+  gap: 6px;                  /* ・とリンクの隙間 */
+  margin: 0;
+  padding: 0;
 }
 
+.bullet {
+  user-select: none;
+  font-size: 20px;           /* 文字サイズを調整 */
+  line-height: 1;            /* 行間を詰める */
+  margin: 0;                 /* 余計な余白を削除 */
+  padding: 0;
+}
 
-.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.06); border-color: #d1d5db; }
-.btn.primary { background: var(--accent); color: #fff; border-color: transparent; }
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .06);
+  border-color: #d1d5db;
+}
 
-.tech { margin-top: 28px; text-align: left; font-size: 14px; color: var(--muted); }
-.tech h2 { font-size: 16px; color: var(--fg); margin: 0 0 8px; }
-.tech ul { margin: 0; padding-left: 18px; }
+.tech {
+  margin-top: 28px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--muted);
+}
 
-.meta { margin-top: 16px; font-size: 12px; color: var(--muted); }
+.tech h2 {
+  font-size: 16px;
+  color: var(--fg);
+  margin: 0 0 8px;
+}
+
+.tech ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.meta {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--muted);
+}

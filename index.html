@@ -11,47 +11,38 @@
 
 <body>
   <main class="wrap" role="main" aria-labelledby="title">
-    <h1 id="title">matsuyama-page</h1>
+    <h1 id="title">Matsuyama’s Web Portfolio</h1>
 
     <figure class="hero">
       <img src="./umi.jpg" alt="メインビジュアル">
     </figure>
 
-<h2>▪️アプリ一覧</h2>
 <div class="app-block">
-    <nav class="links" aria-label="リンク一覧">
-      <a class="btn primary" href="https://yourapp.up.railway.app/board" target="_blank"
-        rel="noopener">掲示板アプリ</a>
-    </nav>
-    <p class="mini-tech">
-      ・使用技術：PHP（Laravel）＋PostgreSQL（Railway）<br>
-      ・解説：ユーザー登録・ログイン、メッセージ投稿・一覧のシンプルな掲示板。
-    </p>
+  <h2 class="app-list">▪️アプリ一覧</h2>
+  <ul class="links">
+    <li>
+      <a class="btn-primary" href="https://yourapp.up.railway.app/board" target="_blank" rel="noopener">掲示板アプリ</a>
+      <p class="mini-tech">
+        言語等：PHP（Laravel）＋PostgreSQL（Railway）<br>
+        解説：ユーザー登録、ログイン、掲示板作成、一覧、メッセージ投稿のシンブルな掲示板アプリです。
+      </p>
+    </li>
+    <li>
+      <a class="btn-primary" href="https://yourapp.up.railway.app/api-docs" target="_blank" rel="noopener">APIデモ</a>
+      <p class="mini-tech">
+        言語等：PHP（Laravel）＋PostgreSQL（Railway）<br>
+        解説：API関連の簡単なデモページ。
+      </p>
+    </li>
+    <li>
+      <a class="btn-primary" href="https://yourapp.up.railway.app/other" target="_blank" rel="noopener">その他</a>
+      <p class="mini-tech">
+        言語等：PHP（Laravel）＋PostgreSQL（Railway）<br>
+        解説：補足的な機能やページのまとめ。
+      </p>
+    </li>
+  </ul>
 </div>
-
-<div class="app-block"></div>
-    <nav class="links" aria-label="リンク一覧">
-      <a class="btn primary" href="https://yourapp.up.railway.app/api-docs" target="_blank"
-        rel="noopener">APIデモ</a>
-    </nav>
-    <p class="mini-tech">
-      使用技術：PHP（Laravel）＋PostgreSQL（Railway）<br>
-      解説：ユーザー登録・ログイン、メッセージ投稿・一覧のシンプルな掲示板。
-    </p>
-</div>
-
-<div class="app-block"></div>
-    <nav class="links" aria-label="リンク一覧">
-      <a class="btn primary" href="https://yourapp.up.railway.app/board" target="_blank"
-        rel="noopener">その他</a>
-    </nav>
-    <p class="mini-tech">
-      使用技術：PHP（Laravel）＋PostgreSQL（Railway）<br>
-      解説：ユーザー登録・ログイン、メッセージ投稿・一覧のシンプルな掲示板。
-    </p>
-</div>
-
-
 
     <p class="meta">© 2025 matsuyama</p>
   </main>
